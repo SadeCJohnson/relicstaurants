@@ -9,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['Foodme->restaurantService'],
+  app_name: ['SCJs-Restaurant-APP->restaurantService'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'NR_LICENSE_KEY',
+  license_key: 'f4ec6b60e1938c68d193d77b01f8aa3fFFFFNRAL',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing

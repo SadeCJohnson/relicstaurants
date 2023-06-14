@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['SCJs-Restaurant-APP->checkoutService'],
+  app_name: ['SCJs-Restaurant-APP->menuService'],
   /**
    * Your New Relic license key.
    */

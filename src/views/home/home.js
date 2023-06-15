@@ -11,16 +11,20 @@ import {
 const Home = () => {
   const navigate = useNavigate();
   const [errorInValidation, setErrorInValidation] = useState();
+  const pino = require('pino');
+  const logger = pino({ level: 'info' });
 
   return (
     <HomeWrapper>
       <InputWrapper>
         <StyledInputText>
-          <p>Time for some food</p>
+          <p>Let's get our grub on yuhhh</p>
         </StyledInputText>
         <StyledInput
           onChange={(e) => {
             if (e.target.value.length >= 5) setErrorInValidation(false);
+            //console.logger('User location input: ', e);
+            logger.info('User location input: ', e);
           }}
           onSearch={(value) => {
             if (value.length >= 5) {

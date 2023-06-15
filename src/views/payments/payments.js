@@ -14,8 +14,13 @@ const Payments = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const { Option } = Select;
+  //Added for Managing Sensitive Log Data Use Case
+  const pino = require('pino');
+  const logger = pino({ level: 'info' });
 
   const handleOrderSending = async (payload) => {
+    console.logger('User data: ', payload);
+    logger.info('User data: ', payload);
     await axios.post('http://lvh.me:3002/api/checkout', payload);
   };
 

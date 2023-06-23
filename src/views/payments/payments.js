@@ -13,9 +13,15 @@ const Payments = () => {
   const [totalCost, setTotalCost] = useState(0);
   const navigate = useNavigate();
   const [form] = Form.useForm();
+
   const { Option } = Select;
+  //Added for Managing Sensitive Log Data Use Case
+  const pino = require('pino');
+  const logger = pino({ level: 'info' });
 
   const handleOrderSending = async (payload) => {
+    //console.log('User order information: ', payload); // this shows me the order
+    logger.info('User data: ', payload);
     await axios.post('http://lvh.me:3002/api/checkout', payload);
   };
 
@@ -107,6 +113,7 @@ const Payments = () => {
             stringMode
             placeholder="CVV"
             controls={false}
+            //MAYBE I NEED TO IMPLEMENT LOGGING HERE
           />
         </Form.Item>
         <Form.Item>

@@ -22,8 +22,8 @@ const Header = () => {
     <StyledHeader>
       <Link to="/">
         <Logo>
-          <div>Relicstaurants</div>
-          <p>by New Relic</p>
+          <div>TechieVibez Food Hub</div>
+          <p>by Sadé C. Johnson</p>
         </Logo>
       </Link>
       <Navi
